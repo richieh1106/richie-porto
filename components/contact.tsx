@@ -3,14 +3,6 @@
 import { Mail, ArrowRight } from "lucide-react"
 
 export function Contact() {
-  const handleResumeDownload = () => {
-    // Create a link to download resume - replace with your actual resume file
-    const link = document.createElement("a")
-    link.href = "/resume.pdf" // Make sure to add your resume.pdf to the public folder
-    link.download = "resume.pdf"
-    link.click()
-  }
-
   return (
     <section className="h-screen w-full snap-start flex items-center justify-center px-6">
       <div className="max-w-4xl w-full space-y-8 fade-in">
@@ -28,7 +20,7 @@ export function Contact() {
 
         <div className="flex flex-col sm:flex-row gap-4 pt-8">
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:richieh1106@gmail.com"
             className="flex items-center justify-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-medium hover:bg-primary/90 transition-all duration-300 hover:scale-105 group"
           >
             <Mail className="w-5 h-5" />

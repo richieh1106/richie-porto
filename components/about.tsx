@@ -13,15 +13,11 @@ export function About() {
 
         <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
           <p>
-            I'm a developer with a passion for creating seamless digital experiences. I believe that great design and
-            functionality go hand in hand, and I'm committed to building products that not only look beautiful but feel
-            intuitive to use.
+            I'm a Computer Science undergrad with a passion for creating meaningful and seamless digital experiences. I love solving problems through code and exploring how technology can make life not just easier, but more inspiring. Whether it's building interactive web apps or experimenting with AI, I'm always excited to learn something new.
           </p>
 
           <p>
-            When I'm not coding, you'll find me enjoying slower R&B tracks, exploring new design trends, or thinking
-            about how to solve problems in creative ways. I approach every project with intention and care, making sure
-            every detail contributes to the overall experience.
+            I believe great design and functionality should work together, that's my main drive when crafting projects that are both visually clean and intuitive to use. I enjoy the process of turning ideas into reality, paying attention to the details that make an interface feel natural and engaging.
           </p>
 
           <p>

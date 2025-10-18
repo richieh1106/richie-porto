@@ -6,32 +6,31 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 export function Projects() {
   const projects = [
     {
-      title: "Project One",
-      description: "A brief description of what this project does and the technologies used.",
-      tags: ["React", "TypeScript", "Tailwind"],
+      title: "Cateringz",
+      description: "A simple mostly HTML-only restaurant/catering website made with responsibility in mind",
+      tags: ["Figma", "HTML", "CSS", "JavaScript"],
+      image: "/Cateringz.png",
+      preview: "https://github.com/richieh1106/cateringz", // ✅ Example link
     },
     {
-      title: "Project Two",
-      description: "Another project showcasing your skills and experience in web development.",
-      tags: ["Next.js", "PostgreSQL", "Node.js"],
+      title: "Eazy Catch",
+      description: "Another interactive HTML project, made together as a group",
+      tags: ["HTML", "CSS", "JavaScript"],
+      image: "/EazyCatch.png",
+      preview: "https://github.com/richieh1106/eazycatch",
     },
     {
-      title: "Project Three",
-      description: "A third project demonstrating your ability to build complete applications.",
-      tags: ["React", "Firebase", "Tailwind CSS"],
+      title: "AI Calorie Tracker",
+      description: "Calorie Tracker AI using a pretrained DenseNet model and a Kaggle calories dataset",
+      tags: ["Kaggle", "Python", "Machine Learning", "HTML"],
+      image: "/AI.png",
+      preview: null,
     },
   ]
 
   const [currentIndex, setCurrentIndex] = useState(0)
-
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? projects.length - 1 : prev - 1))
-  }
-
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev === projects.length - 1 ? 0 : prev + 1))
-  }
-
+  const goToPrevious = () => setCurrentIndex(prev => (prev === 0 ? projects.length - 1 : prev - 1))
+  const goToNext = () => setCurrentIndex(prev => (prev === projects.length - 1 ? 0 : prev + 1))
   const currentProject = projects[currentIndex]
 
   return (
@@ -52,11 +51,18 @@ export function Projects() {
           </button>
 
           <div className="flex-1 p-8 md:p-12 rounded-lg border border-border bg-secondary/20 hover:border-primary/50 transition-all duration-300 fade-in">
+              <div className="w-full h-80 rounded-lg mb-6 overflow-hidden border border-border/30">
+                <img
+                  src={currentProject.image}
+                  alt={currentProject.title}
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
             <h3 className="text-3xl md:text-4xl font-semibold mb-4 text-primary">{currentProject.title}</h3>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">{currentProject.description}</p>
 
-            <div className="flex flex-wrap gap-3">
-              {currentProject.tags.map((tag) => (
+            <div className="flex flex-wrap gap-3 mb-8">
+              {currentProject.tags.map(tag => (
                 <span
                   key={tag}
                   className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20 hover:bg-primary/20 transition-colors"
@@ -65,6 +71,24 @@ export function Projects() {
                 </span>
               ))}
             </div>
+
+            {currentProject.preview ? (
+              <a
+                href={currentProject.preview}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-6 py-3 bg-primary text-background font-semibold rounded-lg hover:bg-accent transition-all duration-300"
+              >
+                View Repository
+              </a>
+            ) : (
+              <button
+                disabled
+                className="inline-block px-6 py-3 bg-muted text-muted-foreground font-semibold rounded-lg cursor-not-allowed opacity-50"
+              >
+                No Preview Available
+              </button>
+            )}
           </div>
 
           <button

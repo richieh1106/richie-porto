@@ -11,21 +11,26 @@ import {
   SiGit,
   SiGithub,
   SiFigma,
-  SiDocker,
+  SiMysql,
+  SiPython,
+  SiAdobephotoshop,
+  SiAdobepremierepro,
+  SiHtml5
 } from "react-icons/si"
 
 export function Skills() {
   const skills = [
-    { name: "React", icon: SiReact },
-    { name: "TypeScript", icon: SiTypescript },
-    { name: "Tailwind CSS", icon: SiTailwindcss },
-    { name: "Next.js", icon: SiNextdotjs },
-    { name: "Node.js", icon: SiNodedotjs },
-    { name: "PostgreSQL", icon: SiPostgresql },
     { name: "Git", icon: SiGit },
     { name: "GitHub", icon: SiGithub },
     { name: "Figma", icon: SiFigma },
-    { name: "Docker", icon: SiDocker },
+    { name: "Python", icon: SiPython },
+    { name: "SQL", icon: SiMysql },
+    { name: "HTML", icon: SiHtml5 },
+    { name: "React", icon: SiReact },
+    { name: "Tailwind CSS", icon: SiTailwindcss },
+    { name: "Adobe Photoshop", icon: SiAdobephotoshop },
+    { name: "Adobe Premiere Pro", icon: SiAdobepremierepro },
+ 
   ]
 
   const [hoveredSkill, setHoveredSkill] = useState<string | null>(null)
